@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>FoodHub</title>
+</head>
+<body>
+  <div class="container-fluid m-0 p-0 parent">
+     <!-------NAV BAR----------> 
+ <nav class="navbar navbar-expand-md bg-light fixed-top navbar">
+  <div class="container">
+    <a class="navbar-brand logo"><span>Food</span>Hub</a>
+    <button class="navbar-toggler navtoggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar togbutton">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end navbarslide" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title logo" id="offcanvasNavbarLabel"><span>Food</span>Hub</h5>
+        <button type="button" class="btn-close togbutton" data-bs-dismiss="offcanvas" aria-label="Close" ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav navitems justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item navitems">
+            <a class="nav-link navli"  href="home.html">Home</a>
+          </li>
+          <li class="nav-item navitems">
+            <a class="nav-link navli" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item navitems">
+              <a class="nav-link navli" href="about.html">About</a>
+            </li>
+            <li class="nav-item navli-a">
+              <a class="nav-link active navliactive" aria-current="page" href="contact.html">Contact</a>
+            </li>  
+         
+            <a href="menu.html"><button class="button navitemsbtn">Order Now</button></a>
+      </div>
+    </div>
+  </div>
+</nav>  
+<!-------NAV BAR ENDS----------> 
+<!-- BANNER SECTION -->
+<section class="contact-banner">
+  <div class="contact-txt text-center pt-5 text-white">
+    <h1>Contact Us</h1>
+   
+  </div>
+</section>
+
+<!-- BANNER SECTION ENDS-->
+
+<!-- SECTION 1 "SEND MESSAGE"-->
+<section class="contact-sect1 py-5 m-0">
+  <div class="send-message box d-md-flex justify-content-center container pt-3">
+    <div class="our-info pe-3 icon-holder">
+      <div class="bg-white shadow mb-2 d-flex pt-2 icon-box rounded">
+        <div class="contact-icon">
+          <i class="fa fa-phone ic"></i>
+        </div>
+        <div class="icon-txt">
+          <h6>Phone Number</h6>
+          <p class="text-muted">+2348023400518</p>
+        </div>
+      </div>
+      <div class="bg-white shadow mb-2 d-flex pt-2 icon-box rounded">
+        <div class="contact-icon">
+          <i class="fa fa-briefcase ic"></i>
+        </div>
+        <div class="icon-txt">
+          <h6>Email Address</h6>
+          <p class="text-muted">foodhub@gmail.com</p>
+        </div>
+      </div>
+      <div class="bg-white shadow mb-2 d-flex pt-2 icon-box rounded">
+        <div class="contact-icon3">
+          <i class="fa fa-map-marker ic"></i>
+        </div>
+        <div class="icon-txt">
+          <h6>Location</h6>
+          <p class="text-muted">56 Azikwe Rd Aba.</p>
+        </div>
+      </div>
+      <div class="  mb-2 d-flex py-2 pb-5 text-center icon-box ">
+        <div class="contact-icon1">
+          <i class="fa fa-facebook"></i>
+        </div>
+        <div class="contact-icon1 ">
+          <i class="fa fa-twitter"></i>
+        </div>
+        <div class="contact-icon1">
+          <i class="fa fa-instagram ic"></i>
+        </div>
+        
+      </div>
+      
+    </div>
+    <div class="contact-form rounded shadow bg-white p-4">
+      <div class="form-head">
+         <h5 class="font-weight-bold">Send Message</h5>
+         <p class="text-muted">Drop a message here if you have any complaint or a special delivery order.<br> Our team will reply you as soon as you drop your message.</p>
+      </div>
+      <div>
+        <p id="errortxt"></p>
+      </div>
+
+      <form method="post" action="home.html" name="contact form" onsubmit="return validate()">
+        <div class="row g-4 mb-4 mt-2">
+          <div class="col">
+            <label class="form-label ">Full Name</label>
+            <input type="text" class="form-control"   id="fname">
+          </div>
+          <div class="col">
+            <label class="form-label ">Email</label>
+            <input type="text" class="form-control"  id="email">
+          </div>
+        </div>
+        <div class="row g-4 mb-4">
+          
+          <div class="col">
+            <label class="form-label ">Phone number</label>
+            <input type="text" class="form-control"  id="number">
+          </div>
+          <div class="col">
+            <label class="form-label ">Subject</label>
+            <input type="text" class="form-control"  id="subject">
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          
+          <textarea class="form-control h-100" placeholder="Message" id="textarea"></textarea>
+        </div>
+        <button class="btn btn-warning contact-button">Send Message</button>
+      </form>
+    </div>
+  </div>
+ 
+</section>
+<!-- SECTION 1 ENDS-->
+
+<!-- SECTION 2 "fIND US ON GOOGLE MAP"-->
+<section class="google-map  pb-5">
+  <div class="location container">
+    <div class="map-txt text-center py-3">
+      <h4>Find Us On Google Maps</h4>
+      <p class="font-weight-bold">With the help of google map you can easily locate us and reach out to us.</p>
+    </div>
+    <div class="map pb-3">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.969046255365!2d7.363867914419566!3d5.108690939408008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1042994ee2712e57%3A0x589c773c9a1a391d!2s56%20Azikiwe%20Rd%2C%20Aba%20450101%2C%20Aba!5e0!3m2!1sen!2sng!4v1664025113960!5m2!1sen!2sng" width="1000" height="450" style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+ 
+</section>
+<!-- SECTION 2 ENDS-->
+
+<!--"FOOTER"-->
+<footer class="footer pt-5 ">
+  <div class="container footer-menu pt-5 px-5">
+      <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 pt-5 footer-menu1">
+            <div class="footer-txt pt-1">
+              <div class="commo mx-5 footer-img"><img src="./images/foodhub-removebg-preview.png" class="w-10">
+                <h3 class=" font-weight-bold">FoodHub</h3></div>
+              <p class="">FoodHub is one of the best food delivery service company located in Aba.<br><b>Our mission</b> is to provide healthy meal service for those who are challenged to find either the time or energy to shop & cook or those who are always busy with work. </p>
+           </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 pt-5">
+            <div class="footer-txt">
+              <h4 class=" text-center font-weight-bold">Quick Links</h4>
+              <ul class=" footer-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+           </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 pt-5">
+            <div class="footer-txt3 pt-5">
+              <h5 class="text-center font-weight-bold">Our Social media Handle</h5>
+              <div class="icon text-center">
+               <a href="https://www.facebook.com"><i class="fa fa-facebook-square ic" aria-hidden="true"> FoodHub</i></a>
+               <a href="https://www.twitter.com"><i class="fa fa-twitter-square ic" aria-hidden="true"> Food_Hub</i></a>
+               <a href="https://www.instagram.com"><i class="fa fa-instagram ic" aria-hidden="true"> FoodHub</i></a>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  
+  <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg">
+    <path fill="#ff0800" fill-opacity="0.9" d="M0,32L80,26.7C160,21,320,11,480,16C640,21,800,43,960,64C1120,85,1280,107,1360,117.3L1440,128L1440,320L1360,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+  </svg>
+ 
+</footer>
+<!--"FOOTER ENDS"-->
+
+
+
+
+<script src="./js/bootstrap.bundle.js"></script>
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script>
+   
+    
+   function validate() {
+
+let fullname = document.getElementById('fname').value;
+let email = document.getElementById('email').value;
+let phonenumber = document.getElementById('number').value;
+let subject = document.getElementById('subject').value;
+let textarea = document.getElementById('textarea').value;
+let mailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+let number = /^[0-9]+$/;
+let letters = /^[A-Za-z]+$/
+let errors = ['Please fill in your full name',  'Please fill your in email', 'Invalid email',  'Please fill in your phone number', 'Incorrect number', 'Please type in Your subject', 'Message box is empty']
+
+if (fullname.trim() == "") {
+  document.getElementById('errortxt').innerHTML = errors[0];
+  return false;
+
+} else if (email.trim() == "") {
+  document.getElementById('errortxt').innerHTML = errors[1];
+  return false;
+} else if (!mailPattern.test(email)) {
+  document.getElementById('errortxt').innerHTML = errors[2];
+  return false;
+
+} else if (phonenumber.trim() == "") {
+  document.getElementById('errortxt').innerHTML = errors[3];
+  return false;
+} else if (!number.test(phonenumber)) {
+  document.getElementById('errortxt').innerHTML = errors[4];
+  return false;
+} else if (phonenumber.length > 11 || phonenumber.length < 11) {
+  document.getElementById('errortxt').innerHTML = errors[4];
+  return false;
+} else if (subject == "") {
+  document.getElementById('errortxt').innerHTML = errors[5];
+  return false;
+} else if (textarea == "") {
+  document.getElementById('errortxt').innerHTML = errors[6];
+  return false;
+} else {
+  return true;
+}
+
+}
+</script>
+
+  </script>
+  </div>
+</body>
+</html>

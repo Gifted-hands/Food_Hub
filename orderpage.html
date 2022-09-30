@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Order Page</title>
+</head>
+
+<body>
+
+    <div class="container-fluid form-container">
+
+        <form class="row g-3" method="post" action="payment.html" name="Order form" onsubmit="return verify()">
+
+
+
+
+
+            <h3 class="title">Order Now</h3>
+
+            <div>
+                <p id="errortxt"></p>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Emeka Duke">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Phone Number</label>
+                <div class="input-group">
+                    <div class="input-group-text">+234</div>
+                    <input type="text" class="form-control" id="number" placeholder="09039544017">
+                </div>
+            </div>
+            <div class="col-12">
+                <label class="form-label">Your Order</label>
+                <input type="text" class="form-control" id="order" placeholder="Egusi Soup">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Additional food</label>
+                <input type="text" class="form-control" id="extraorder" placeholder="Chicken Pie">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="quantity" placeholder="1">
+            </div>
+            <div class="col-12">
+                <label class="form-label">Date and Time</label>
+                <input type="datetime-local" class="form-control" id="time">
+            </div>
+            <div class="col-12">
+                <label class="form-label">Delivery Location</label>
+                <input type="text" class="form-control" id="location" placeholder="62 Azikwe Rd Aba.">
+            </div>
+
+            <input type="submit" value="proceed to Payment" class="submit-btn">
+        </form>
+
+    </div>
+    <!-- loader part  -->
+    <div class="loader-container">
+        <img src="images/loader.gif" alt="">
+    </div>
+
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+
+    <script>
+        function loader() {
+            document.querySelector('.loader-container').classList.add('fade-out');
+        }
+
+        function fadeOut() {
+            setInterval(loader, 3000);
+        }
+
+        window.onload = fadeOut;
+
+        function verify() {
+
+            let name = document.getElementById('name').value;
+            let phonenumber = document.getElementById('number').value;
+            let order = document.getElementById('order').value;
+            let quantity = document.getElementById('quantity').value;
+            let time = document.getElementById('time').value;
+            let location = document.getElementById('location').value
+            let number = /^[0-9]+$/;
+            let letters = /^[A-Za-z]+$/
+            let errors = ['Please fill in your name','please fill in your number','Incorrect number', 'Please fill in your order',  'Please tell us the quantity needed', 'What time would us to deliver it', 'Please fill in the delivery location']
+
+            if (name.trim() == "") {
+                document.getElementById('errortxt').innerHTML = errors[0];
+                return false;
+            } else if (phonenumber.trim() == "") {
+                document.getElementById('errortxt').innerHTML = errors[1];
+                return false;
+            } else if (!number.test(phonenumber)) {
+                document.getElementById('errortxt').innerHTML = errors[2];
+                return false;
+            } else if (phonenumber.length > 11 || phonenumber.length < 11) {
+                document.getElementById('errortxt').innerHTML = errors[2];
+                return false;
+            } else if (order == "") {
+                document.getElementById('errortxt').innerHTML = errors[3];
+                return false;
+            } else if (quantity == "") {
+                document.getElementById('errortxt').innerHTML = errors[4];
+                return false;
+            } else if (time == "") {
+                document.getElementById('errortxt').innerHTML = errors[5];
+                return false;
+            } else if (location == "") {
+                document.getElementById('errortxt').innerHTML = errors[6];
+                return false;    
+            } else {
+                return true;
+            }
+        }    
+    </script>
+
+</body>
+
+</html>

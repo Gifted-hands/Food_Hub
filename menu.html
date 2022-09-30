@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <title>FoodHub</title>
+
+
+  <style>
+    :root {
+      --green: orange;
+      --black: red;
+      --light-color: #666;
+      --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    }
+
+    * {
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      outline: none;
+      border: none;
+      text-transform: capitalize;
+      transition: all .2s linear;
+    }
+
+
+    body {
+      background-color: #EEEEEE;
+    }
+
+    .search-div {
+      padding-top: 5em !important;
+
+    }
+
+    .search-div input {
+      margin-top: 1em;
+      width: 87vw;
+      outline: none;
+      border-radius: 20px !important;
+      padding: 0.5rem;
+      padding-left: 1rem;
+
+    }
+
+    .menu-banner {
+      height: 45vh;
+      width: 100%;
+      position: relative;
+
+    }
+
+    .menu-banner-txt {
+      clip-path: polygon(0 0, 61% 0, 78% 100%, 0% 100%);
+      width: 120%;
+      background: linear-gradient(to left, orange, orangered);
+      height: 45vh;
+      padding-top: 6em !important;
+      padding-left: 4em !important;
+    }
+
+    .banner-slide {
+      width: 100%;
+      margin-left: -310px;
+      height: 45vh;
+      z-index: -1;
+      right: 0;
+    }
+
+    .banner-1 {
+      background-image: url(./images/menu\ banner\ img2.jpg);
+      background-size: cover;
+      background-position: center bottom;
+      width: 100%;
+      height: 45vh;
+    }
+
+    .banner-2 {
+      background-image: url(./images/beans\ and\ plantain.jpg);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 45vh;
+    }
+
+    .banner-3 {
+      background-image: url(./images/menu\ banner\ img.jpg);
+      background-size: cover;
+      width: 100%;
+      height: 45vh;
+    }
+
+    .menu-banner-txt {
+      padding-left: 5em !important;
+    }
+
+    .menu-banner-txt h1 {
+      color: yellow;
+      font-weight: bold;
+    }
+
+    .menu-banner-txt i {
+      font-size: 35px;
+    }
+
+    .menu-banner-txt h2 {
+      color: white;
+    }
+
+    .menu-banner-img {
+      height: 45vh;
+      width: 58%;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      right: 0;
+
+    }
+
+    .food-categories ul li {
+      list-style: none;
+    }
+
+    .food-categories ul li a {
+      text-decoration: none;
+      margin-right: 2.5em;
+      color: black;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: orangered;
+    }
+
+    .food-categories ul li a:hover {
+      color: white;
+      background-color: orange;
+      padding: 8px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .food-categories ul li span {
+
+      align-items: center;
+      width: 1%;
+    }
+   
+
+    .categories h4 {
+      font-weight: bold;
+      margin-top: 1rem;
+
+    }
+
+    /* menu */
+    .heading {
+      text-align: center;
+      color: var(--black);
+      font-size: 2rem;
+      font-weight: bold;
+
+      padding-bottom: 2rem;
+      text-transform: uppercase;
+
+    }
+
+    .btn {
+      margin-top: 0.5rem;
+      display: inline-block;
+      font-size: 1rem;
+      color: #fff;
+      background: var(--black);
+      border-radius: .5rem;
+      cursor: pointer;
+      padding: .7rem 1.5rem;
+    }
+
+    .btn:hover {
+      background: var(--green);
+      letter-spacing: .1rem;
+      border: none;
+      color: #fff;
+    }
+
+    .menu .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      gap: 1.5rem;
+
+    }
+
+    .menu .box-container .box {
+      background: #fff;
+      border: .1rem solid rgba(0, 0, 0, .2);
+      border-radius: .5rem;
+      box-shadow: var(--box-shadow);
+    }
+
+    .menu .box-container .box .image {
+      height: 18rem;
+      width: 100%;
+      padding: 1rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .menu .box-container .box .image img {
+      height: 100%;
+      width: 100%;
+      border-radius: .5rem;
+      object-fit: cover;
+    }
+
+    .menu .box-container .box .image .fa-heart {
+      position: absolute;
+      top: 2rem;
+      right: 2.5rem;
+      height: 2.5rem;
+      width: 2.5rem;
+      line-height: 2.5rem;
+      text-align: center;
+      font-size: 1.2rem;
+      background: #fff;
+      border-radius: 50%;
+      color: var(--black);
+    }
+
+    .menu .box-container .box .image .fa-heart:hover {
+      background-color: var(--green);
+      color: #fff;
+    }
+
+    .menu .box-container .box .content {
+      padding: 1.5rem;
+      padding-top: 0;
+    }
+
+    .menu .box-container .box .content .stars {
+      padding-bottom: 1rem;
+    }
+
+    .menu .box-container .box .content .stars i {
+      font-size: 1rem;
+      color: var(--green);
+    }
+
+    .menu .box-container .box .content h3 {
+      color: var(--black);
+      font-size: 1.2rem;
+    }
+
+    .menu .box-container .box .content p {
+      color: var(--light-color);
+      font-size: 1rem;
+      padding: .2rem 0;
+      line-height: 1.2;
+    }
+
+    .menu .box-container .box .content .price {
+      color: var(--green);
+      margin-left: 1rem;
+      font-size: 1.3rem;
+    }
+
+    
+    .loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 10000;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .loader-container img {
+      width: 18rem;
+    }
+
+    .loader-container.fade-out {
+      top: -110%;
+      opacity: 0;
+    }
+
+
+
+
+
+
+    @media screen and (max-width: 768px){
+
+      .search-div {
+      padding-top: 7em !important;
+
+    }
+      .menu-banner-txt {
+      padding-left: 4em !important;
+    }
+
+    .menu-banner-txt h1 {
+      color: yellow;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .menu-banner-txt i {
+      font-size: 24px;
+    }
+
+    .menu-banner-txt h2 {
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .menu-banner-txt {
+      clip-path: polygon(0 0, 61% 0, 78% 100%, 0% 100%);
+      width: 90%;
+      background: linear-gradient(to left, orange, orangered);
+      height: 40.1vh;
+      padding-top: 10em !important;
+      padding-left: 2em !important;
+    }
+    .menu-banner-img {
+      height: 40vh;
+      width: 58%;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      right: 0;
+
+    }
+
+    .banner-1 {
+    
+      height: 40vh;
+    }
+
+    .banner-2 {
+      
+      height: 40vh;
+    }
+
+    .banner-3 {
+      
+      height: 40vh;
+    }
+
+    .categories h4 {
+      font-weight: bold;
+      margin-top: 0.7rem;
+
+    }
+
+    }
+
+
+
+
+    @media screen and (max-width: 480px) {
+      .menu-banner {
+        display: none;
+      }
+
+      .banner-slide {
+        display: none;
+      }
+
+      .food-categories ul li a {
+      margin-right: 1.3em;
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+
+    .categories h4 {
+      font-weight: bold;
+      margin-top: 0.7rem;
+
+    }
+   
+    }
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container-fluid m-0 p-0 parent">
+    <!-------NAV BAR---------->
+    <nav class="navbar navbar-expand-lg bg-light fixed-top navbar">
+      <div class="container">
+        <a class="navbar-brand logo"><span>Food</span>Hub</a>
+        <button class="navbar-toggler navtoggler" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar togbutton">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end navbarslide" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title logo" id="offcanvasNavbarLabel"><span>Food</span>Hub</h5>
+            <button type="button" class="btn-close togbutton" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav navitems justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item navitems">
+                <a class="nav-link navli" href="home.html">Home</a>
+              </li>
+              <li class="nav-item navli-a">
+                <a class="nav-link active navliactive" aria-current="page" href="menu.html">Menu</a>
+              </li>
+              <li class="nav-item navitems">
+                <a class="nav-link navli" href="about.html">About</a>
+              </li>
+              <li class="nav-item navitems">
+                <a class="nav-link navli" href="contact.html">Contact</a>
+              </li>
+
+              <a href="sign up.html"><button class="button navitemsbtn">Sign up</button></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-------NAV BAR ENDS---------->
+
+    <div class="parent-element container">
+      <!-- SECTION 1 "SEARCH" -->
+
+      <section class="search-div pt-5 pb-3">
+        <input class="form-control" list="datalistOptions" id="exampleDataList"
+          placeholder="What would you like to order?">
+        <datalist id="datalistOptions">
+          <option value="Ham burger">
+          <option value="nkwobi">
+          <option value="egusi soup">
+          <option value="crispy chicken">
+        </datalist>
+       
+      </section>
+
+      <!-- SECTION 1 "SEARCH" ENDS --->
+
+      <!--- SECTION 2 "MENU BANNER" --->
+
+      <section class="menu-banner d-md-flex">
+        <div class="menu-banner-txt pt-5 ps-5 ">
+          <h1>20% OFF</h1>
+          <h2>When you Order any of this <i class="fa fa-hand-o-right ic"></i></h2>
+        </div>
+
+        <div id="carouselExampleFade" class="carousel slide banner-slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active banner-1">
+
+            </div>
+            <div class="carousel-item banner-2">
+
+            </div>
+            <div class="carousel-item banner-3">
+
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- <div class="menu-banner-img">
+          <img src="./images/menu banner img2.jpg" id="slideimg" class="img-fluid">
+        </div> -->
+
+
+
+      </section>
+
+      <!------- SECTION 2 "MENU BANNER" ENDS----------------------->
+
+      <!------- SECTION 3 "OUR FOOD NAV"---------------------->
+
+      <section class="our-food-div">
+        <div class="food-nav pt-4">
+          <div class="categories">
+            <h4>Categories</h4>
+          </div>
+
+          <div class="food-categories pt-2">
+            <ul class=" d-flex justify-content-start  flex-grow-1 pe-3">
+              <li>
+                <a href="#snacks/pizza">Pizza/snacks</a>
+              </li>
+              <li>
+                <a href="#main-course">Main Course</a>
+              </li>
+              <li>
+                <a href="#soups">Soups</a>
+              </li>
+              <li>
+                <a  href="#grill">Grills</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+      <!------- SECTION 3 "OUR FOOD NAV" ENDS----------------------->
+
+      <!-- SECTION 4 "SOUP DIV" -->
+      <section class="menu pb-5" id="soups">
+
+        <h1 class="heading text-center pt-5"> soups </h1>
+
+        <div class="box-container pb-5">
+
+          <div class="box">
+            <div class="image">
+              <img src="images/efo-rifo soup.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Efo Rifo Soup</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order now</a>
+              <span class="price"> &#x20A6;1200.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/egusi soup.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Egusi Soup</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order now</a>
+              <span class="price">&#x20A6;1000.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/bitter leaf soup.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Bitterleaf Soup</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;800.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/oha.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Oha Soup</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;800.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/Ogbono Soup.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Ogbono Soup</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;850.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/okrosoup.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>vegetable Soup</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;850.00</span>
+            </div>
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- SECTION 4 "SOUP DIV" ENDS-->
+
+      <!-- SECTION 5 "SNACKS DIV"-->
+
+      <section class="menu pb-5" id="snacks/pizza">
+
+        <h1 class="heading text-center pt-2"> snacks/pizza </h1>
+
+        <div class="box-container">
+
+          <div class="box">
+            <div class="image">
+              <img src="images/barbecue-chicken-pizza-720x514.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Barbecue Chicken Pizza</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order now</a>
+              <span class="price"> &#x20A6;1700.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/burger2.jpeg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Ham Burger</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order now</a>
+              <span class="price">&#x20A6;1500.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/chicken pie.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Chicken Pie</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;750.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/menu-4.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Milk Creamy Biscuit</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;800.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/crispychicken.jpeg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Crispy Chicken</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;2000.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/menu banner img2.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Burger and Potatoe Chips</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;2600.99</span>
+            </div>
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- SECTION 5 "SNACKS DIV" ENDS-->
+
+      <!-- SECTION 6 "MAIN-COURSE DIV" -->
+
+      <section class="menu pb-5" id="main-course">
+
+        <h1 class="heading text-center pt-5"> main course </h1>
+
+        <div class="box-container">
+
+          <div class="box">
+            <div class="image">
+              <img src="images/jollof rice.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Ninja Jollof Rice</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order now</a>
+              <span class="price"> &#x20A6;1300.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/spaghetti with meatballs.png" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Spaghetti with Meatballs</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order now</a>
+              <span class="price">&#x20A6;1500.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/ofada rice.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Ofada Rice</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;1900.99</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/nkwobi.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Nkwobi</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;3500.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/yam porridge.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Yam Porridge</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;2500.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/beans and plantain.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Beans With Plaintain</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;1000.00</span>
+            </div>
+          </div>
+
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 6 "MAIN-COURSE DIV" ENDS-->
+
+      <!-- SECTION 7 "GRILL DIV"-->
+
+
+      <section class="menu pb-5" id="grill">
+
+        <h1 class="heading text-center pt-5"> grills </h1>
+
+        <div class="box-container">
+
+          <div class="box">
+            <div class="image">
+              <img src="images/Barbecued-Chicken.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Barbecued Chicken</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order now</a>
+              <span class="price"> &#x20A6;2300.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/grilled fish.jpeg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Grilled Fish</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order now</a>
+              <span class="price">&#x20A6;4000.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/suya 1.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Suya</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;1200.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/chicken-grilled.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Crispy Grilled Chicken Wings</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;3000.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/barbecue fish.jpeg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Barbecued Fish</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage" class="btn">Order Now</a>
+              <span class="price">&#x20A6;2500.00</span>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/Easy Honey Sesame Salmon In Foil - Cafe Delites.jpeg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Sesame Honey Salmon</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+              <a href="orderpage.html" class="btn">Order Now</a>
+              <span class="price">&#x20A6;1000.00</span>
+            </div>
+          </div>
+
+
+        </div>
+
+      </section>
+
+      <!-- SECTION 7"GRILL DIV" ENDS-->
+
+
+      <!-- loader part  -->
+      <div class="loader-container">
+        <img src="images/loader.gif" alt="">
+      </div>
+
+    </div>
+
+    
+    <!--"FOOTER"-->
+    <footer class="footer pt-5">
+      <div class="container footer-menu pt-5 px-5">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 pt-5 footer-menu1">
+                <div class="footer-txt pt-1">
+                  <div class="commo mx-5 footer-img"><img src="./images/foodhub-removebg-preview.png" class="w-10">
+                    <h3 class=" font-weight-bold">FoodHub</h3></div>
+                  <p class="">FoodHub is one of the best food delivery service company located in Aba.<br><b>Our mission</b> is to provide healthy meal service for those who are challenged to find either the time or energy to shop & cook or those who are always busy with work. </p>
+                  <!-- <button class="btn btn-warning">Read More</button> -->
+               </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 pt-5">
+                <div class="footer-txt">
+                  <h4 class=" text-center font-weight-bold">Quick Links</h4>
+                  <ul class=" footer-list">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                  </ul>
+               </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 pt-5">
+                <div class="footer-txt3 pt-5">
+                  <h5 class="text-center font-weight-bold">Our Social media Handle</h5>
+                  <div class="icon text-center">
+                   <a href="https://www.facebook.com"><i class="fa fa-facebook-square ic" aria-hidden="true"> FoodHub</i></a>
+                   <a href="https://www.twitter.com"><i class="fa fa-twitter-square ic" aria-hidden="true"> Food_Hub</i></a>
+                   <a href="https://www.instagram.com"><i class="fa fa-instagram ic" aria-hidden="true"> FoodHub</i></a>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      
+      <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg">
+        <path fill="#ff0800" fill-opacity="0.7" d="M0,32L80,26.7C160,21,320,11,480,16C640,21,800,43,960,64C1120,85,1280,107,1360,117.3L1440,128L1440,320L1360,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+      </svg>
+     
+   </footer>
+
+  <!--"FOOTER ENDS"-->
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    
+    <script>
+
+      function loader() {
+        document.querySelector('.loader-container').classList.add('fade-out');
+      }
+
+      function fadeOut() {
+        setInterval(loader, 3000);
+      }
+
+      window.onload = fadeOut;
+    </script>
+  </div>
+</body>
+
+</html>

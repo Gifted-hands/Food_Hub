@@ -1,0 +1,1951 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: poppins;
+    src: url(poppins.light.ttf);
+}
+@font-face{
+    font-family: poppinsregular;
+    src: url(poppins.regular.ttf);
+    font-weight: bold;
+}
+.parent{
+    overflow: hidden;
+    width: 100%;
+}
+
+.homeparent{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;  
+}
+.navbar{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    border-color: rgba(223, 225, 229, 0); 
+    background-color: white !important;
+}
+.logo{
+    margin-top: 3px;
+    color: #ff0800 !important;
+    font-weight: bold !important;
+    font-size: 1.5em !important;
+}
+.logo span{
+    color: #000000;
+}
+.navitems{
+    display: flex !important;
+    margin-top: 3px !important;
+}
+.navli{
+    list-style: none !important;
+}
+.navli{
+    text-decoration: none !important;
+    margin-right: 24px !important;
+    font-weight: bold !important;
+    width: 90% !important;
+    color:  #6F6A69 !important;
+    font-size: 1em !important;
+}
+.navli-a{
+    margin-right: 20px;
+    margin-top: 3px;
+    font-weight: bold !important;
+    color:  #6F6A69 !important;
+    font-size: 1em !important; 
+}
+.navli:hover{
+    color:  #ff0800 !important;
+}
+.navliactive.active{
+    color: #ff0800 !important;
+    border-bottom: 2px solid #ff0800 !important;
+}
+.navitemsbtn{
+    background-color: #ff0800;
+    border: 2px solid #ff0800;
+    outline: none;
+    font-size: 0.9em;
+    font-weight: light;
+    padding: 0 13px;
+    height: 4.5vh;
+    border-radius: 25px;
+    color: white;
+    margin-top: 8px !important;
+}
+.navitemsbtn:hover{
+    background-color: white;
+    border: 2px solid #ff0800;
+    color: #000000;
+}
+.navtoggler{
+    transition: 15ms ease-in-out !important;
+    box-shadow: none !important;
+ }
+.banner{
+    display: flex;
+    height: 100vh;
+    
+}
+.banner-a{
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    background-color: #ff0800;
+    height: 100vh;
+    width: 88%;
+} 
+.banner-a-text{
+    padding-top: 260px;
+    margin-left: 3.6em;
+}
+.banner-a-text h1{
+    font-weight: bold;
+    font-size: 2.5em;
+    color: white;
+}
+.banner-a-text h1 span{
+    color: yellow;
+}
+.banner-a-text p{
+    font-size: 1em;
+    letter-spacing: 0.9px;
+    width: 80%;
+    padding-top: 10px;
+    color: white;
+}
+.banner-a-text button{
+    width: 25%;
+    height: 6vh;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 17px;
+    color: #000000;
+    transition: transform .2s;
+    background-color: yellow;
+
+
+}
+.banner-a-text button:hover{
+    transform: scale(1.1);
+    transition: 1.5s ease-in-out;
+    background-color: white;
+    color: red;
+}
+
+.banner-b{
+    margin-top: 0px !important;
+    width: 100% !important;
+    height: 140vh !important;
+    background-color:white;
+     position: relative;
+    right: 0px;
+    z-index: -1 !important;
+    margin-left: -168px !important;
+}
+.bg1{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-image: url(../images/burger2.jpeg);
+    background-size: cover;
+    filter: brightness(95%);
+}
+.bg2{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-image: url(../images/egusi\ soup.jpg);
+    background-size: cover;
+    filter: brightness(95%);
+}
+.bg3{
+    height: 100vh;
+    background-position: center;
+    width: 100% !important;
+    background-image: url(../images/Peri\ Peri\ Style\ Chicken\ and\ Rice\ -\ Moribyan.jpeg);
+    background-size: cover;
+    filter: brightness(95%);
+}
+.bg1 h2{
+    text-align: center;
+    color: white;
+    margin-top: 250px;
+    font-size: 80px;
+}
+.bg1 h3{
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 80px;
+}
+.bg1 button{
+    width: 34%;
+    height: 8vh;
+    margin-top: 80px;
+    margin-left: 240px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    background-color: #ff0800;
+}
+.bg1 button:hover{
+    transform: scale(1.1);
+    transition: 1.5s ease-in-out;
+    background-color: white;
+    color: red;
+}
+
+
+
+/* //section-1// */
+.sect1-txt h3{
+    color: #000000;
+}
+.card1:hover{
+    transition: 1.5s ease-in-out;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px solid gray;
+}
+.card2:hover{
+    transition: 1.5s ease-in-out;
+    transform: scale(1.1);
+}
+.card3:hover{
+    transition: 1.5s ease-in-out;
+    transform: scale(1.1);
+}
+.card4:hover{
+    transition: 1.5s ease-in-out;
+    transform: scale(1.1);
+}
+.card1-txt{
+    color: #ff0800;
+} 
+.card3-img{
+    width: 77% !important;
+    margin-left: 23px !important;
+}
+.card4-img{
+    width: 100% !important;
+}
+.how-it-works{
+    background-color: #eeeeee;
+    
+ 
+
+}
+
+
+
+
+
+/* ///  SECTION2  /// */
+.why-choose-us{
+   background-color: #eeeeee;
+}
+.sect2-txt h3{
+    color: #000000;
+}
+.item1-img{
+    width: 80%;
+}
+.item2-img{
+    width: 80%;
+}
+.txt-item{
+    color: #ff0800;
+}
+
+
+
+
+/* //  SECTION 3 // */
+.today-meal{ 
+   background-color: #eeeeee;
+}  
+.sect3-txt{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    
+}
+.meal-box{
+    width: 100%;
+    height: 65vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    
+}
+.meal-box1{
+    grid-column: 1;
+    grid-row: 1/3;
+    border-radius: 20px;
+    width: 100%;
+    position: relative; 
+    background-image: url(../images/Barbecued-Chicken.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+.meal-box1:hover{
+    transition: 2s ease-in-out;
+    transform: scale(0.9);
+    box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+    cursor: pointer;
+}
+.meal-box1 .txt-holder{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%; 
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+}
+
+.meal-box2{
+    border-radius: 20px;
+    width: 100%;
+    position: relative; 
+    background-image: url(../images/egusi\ soup.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;  
+  
+}
+.meal-box2:hover{
+    transition: 2s ease-in-out;
+    transform: scale(0.9);
+    box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+    cursor: pointer;
+}
+.meal-box2 .txt-holder{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%; 
+    padding: 5px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+}
+
+.meal-box3{
+    border-radius: 20px;
+    position: relative; 
+    background-image: url(../images/jollof\ rice.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.meal-box3:hover{
+    transition: 2s ease-in-out;
+    transform: scale(0.9);
+    box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+    cursor: pointer;
+}
+.meal-box3 .txt-holder{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%; 
+    padding: 5px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+}
+.meal-box5{
+    border-radius: 20px;
+    position: relative; 
+    background-image: url(../images/Ogbono\ Soup.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.meal-box5:hover{
+    transition: 2s ease-in-out;
+    transform: scale(0.9);
+    box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+    cursor: pointer;
+}
+.meal-box5 .txt-holder{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%; 
+    padding: 5px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+}
+.meal-box6{
+    border-radius: 20px;
+    position: relative; 
+    background-image: url(../images/spaghetti\ with\ meatballs.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.meal-box6:hover{
+    transition: 2s ease-in-out;
+    transform: scale(0.9);
+    box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+    cursor: pointer;
+}
+.meal-box6 .txt-holder{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%; 
+    padding: 5px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+}
+.sect3-btn button{
+    border: none;
+}
+.sect-btn{
+    color: white !important;
+    font-weight: bold !important;
+    background-color: #ff0800;
+}
+.sect-btn:hover{
+    transition: 2s ease-in-out;
+    transform: scale(1.1);
+    background-color: yellow;
+    color: #000000 !important;
+    
+}
+#view-all{
+    text-decoration: none;
+    color: #000000;
+}
+#view-all:hover{
+    color: #ff0800;
+}
+
+/* /// SECTION 4 /// */
+.our-customer{
+    
+  background-color: #eeeeee;
+ } 
+.sect4-txt{
+    text-align: center;
+}
+#customers-testimonials .item {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 15px;
+    opacity: .2;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #FFF;
+    border-radius: 3px;
+}
+#customers-testimonials .owl-item.active.center .item {
+    opacity: 1;
+    -webkit-transform: scale3d(1.0, 1.0, 1);
+    transform: scale3d(1.0, 1.0, 1);
+    background-color: #FFF;
+}
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+    max-width: 90px;
+    margin: 0 auto 17px;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span, #customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+    background: orange;
+    transform: translate3d(0px, -50%, 0px) scale(0.6);
+}
+#customers-testimonials.owl-carousel .owl-dots {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot {
+    display: inline-block;
+    outline: none;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+    background: rgba(255, 166, 0, 0.4);
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 5px;
+    transform: translate3d(0px, -50%, 0px) scale(0.3);
+    transform-origin: 50% 50% 0;
+    transition: all 250ms ease-out 0s;
+    width: 20px;
+    border-radius: 100%;
+}
+.commo img {
+    width: 30px !important;
+    height: auto;
+    float: left;
+}
+.author-img{
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 100%;
+    background-image: url(../images/ceo.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.author-img2{
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 100%;
+    background-image: url(../images/amaka.jpg);
+    background-position: center top;
+    background-size: cover;
+}
+.author-img3{
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 100%;
+    background-image: url(../images/chioma.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.author-img4{
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 100%;
+    background-image: url(../images/my.jpg);
+    background-position: center top;
+    background-size: cover;
+}
+.author-img img {
+    width: 60px !important;
+    height: auto;
+    border-radius: 100%;
+    margin-bottom: 0 !important;
+}
+
+/* /// SECTION 5 /// */
+.sect5-txt{
+    text-align: center;
+}
+.sect5-txt h3{
+    color: #000000;
+}
+.img1{
+    width: 100% !important;
+}
+.patner{
+    
+    background-color: #eeeeee;
+    border-radius: 8px;
+}
+.patner-row img{
+   width: 60% !important;
+    
+}
+.our-patners{
+   
+    background-color: #eeeeee;
+}
+
+/* //footer// */
+
+.footer{
+   
+   background-color: #eeeeee;
+    font-family: sans-serif;
+    position: relative;
+    font-size: 1em;
+}
+.footer-txt span{
+    color: #ff0800;
+
+}
+.footer-txt h3{
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+.footer-txt p{
+    line-height: 25px;
+}
+.footer-txt button{
+    margin-left: 5em;
+    font-weight: 500;
+    background-color: yellow !important;
+    border: none;
+    height: 5vh !important;
+}
+.footer-list{
+    font-size: 1em;
+    padding-top: 10px;
+    border: none !important;
+    outline: none !important;
+    background-color: transparent !important;
+    text-align: center;
+}
+.footer-list li a{
+    text-decoration: none;
+    margin-bottom: 50px;
+    color: white;
+}
+.footer-list li{
+    list-style-type: none;
+    margin-bottom: 10px
+}
+.li-item a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+}
+.footer-list li a:hover{
+    color: yellow;
+}
+.footer-txt3{
+    padding-top: 100px !important;
+}
+.footer-menu{
+    position: absolute;
+    font-size: 16px;
+    bottom: 0;
+    color: white;
+    
+}
+.icon{
+    font-size: 20px;
+    padding-top: 10px;
+    margin-right: 15px;
+}
+.icon a{
+    color: white;
+    font-family: sans-serif;
+}
+.icon a:hover{
+    color: yellow;
+}
+
+/* LOADER */
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .loader-container img {
+    width: 18rem;
+  }
+
+  .loader-container.fade-out {
+    top: -110%;
+    opacity: 0;
+  }
+
+
+
+
+
+
+
+/* /////////////////////////////////// CONTACT US PAGE ///////////////////////////////////////////////// */
+
+.contact-banner{
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../images/chicken.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+ 
+}
+.contact-form{
+    height: auto;
+}
+
+.contact-txt h1{
+    font-size: 4em;
+    opacity: 0.9;
+    text-shadow: 5px 0px 5px solid #ff0800;
+}
+.contact-sect1{
+   background-color: #eeeeee; 
+}
+
+.icon-holder{
+    width: auto;
+    height:  auto;
+}
+.contact-icon{
+    position: relative;
+    width: 19%;
+    height: 6Vh;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: rgb(245, 221, 217);
+    margin: 3px 19px 0px 10px;
+}
+.contact-icon i{
+    position: absolute;
+    left: 2;
+    font-size: 20px;
+    color: tomato;
+}
+.contact-icon3{
+    position: relative;
+    width: 19%;
+    height: 6Vh;
+    padding: 9px 0px 0px 12px;
+    border-radius: 100%;
+    background-color: rgb(245, 221, 217);
+    margin: 3px 19px 0px 10px;
+}
+.contact-icon3 i{
+    position: absolute;
+    font-size: 21px;
+    color: tomato;
+}
+.icon-txt p{
+    font-size: 13px;
+}
+.contact-icon1{
+   
+    width: 19%;
+    height: 6Vh;
+    padding: 10px;
+    border-radius: 100%;
+    background: white;
+    box-shadow: 0px 0px 5px 0px rgba(32, 33, 36, 0.28);
+    margin: 3px 19px 0px 12px;
+}
+.contact-icon1:hover{
+    transition: 1.5s ease-in-out;
+    transform: scale(1.3);
+    cursor: pointer;
+}
+.contact-icon1 i{
+    font-size: 23px;
+    color: tomato;
+}
+.contact-txt{
+    padding-top: 9em !important;
+    width: auto;
+}
+.form-head p{
+    font-size: 14px;
+}
+.contact-button{
+    background-color: #ff0800;
+    color: white;
+    border: none;
+}
+.google-map{
+    box-shadow: 6px 0px 6px 0px rgba(32, 33, 36, 0.28);
+   
+}
+
+.map{
+    margin-left: 5em;
+    width: 100%;
+}
+
+#errortxt{
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.footer{
+    background-color: #eeeeee;
+    font-family: sans-serif;
+    position: relative;
+    font-size: 1em;
+}
+
+/*/// CONTACT US PAGE ENDS /// */
+
+
+
+
+
+
+
+/* ////////////////////////// //////// MEDIA QUERY    /////////////////////////////////////////////// */
+
+@media screen and (min-width: 1025px){
+    .bg1 h2{
+        display: none;
+    }
+    .bg1 h3{
+        display: none;
+    }
+    .bg1 button{
+        display: none;
+    }
+    .bg1 button:hover{
+        display: none;
+    }
+    .bg2 h2{
+        display: none;
+    }
+    .bg2 h3{
+        display: none;
+    }
+    .bg2 button{
+        display: none;
+    }
+    .bg2 button:hover{
+        display: none;
+    }
+    .bg3 h2{
+        display: none;
+    }
+    .bg3 h3{
+        display: none;
+    }
+    .bg3 button{
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width:1024px){
+    .logo{
+        margin-top: 6px;
+        color: #ff0800 !important;
+        font-weight: bold !important;
+        font-size: 2em !important;
+    }
+    .navitemsbtn{
+        background-color: #ff0800;
+        border: 2px solid #ff0800;
+        outline: none;
+        font-size: 0.9em;
+        font-weight: light;
+        padding: 0 13px;
+        height: 2.5vh;
+        border-radius: 25px;
+        color: white;
+        margin-top: 8px !important;
+    }
+    
+    .banner-a{
+       
+        display: none;
+    } 
+
+    .banner{
+        height: 80vh;
+    }
+    .banner-b{
+        margin-top: 0px !important;
+        width: 100% !important;
+        height: 80vh !important;
+         position: relative;
+        z-index: -1 !important;
+        margin-left: 0px !important;
+    }
+    .bg1{
+        width: 100%;
+        height: 80vh;
+        background: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/burger2.jpeg);
+        background-position: center;
+        background-size: cover;
+    }
+    .bg2{
+        width: 100%;
+        height: 80vh;
+        background: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/egusi\ soup.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .bg3{
+        height: 80vh;
+        background: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/Peri\ Peri\ Style\ Chicken\ and\ Rice\ -\ Moribyan.jpeg);
+        background-position: center;
+        width: 100% !important;
+        background-size: cover;
+    }
+    .bg1 h2{
+        text-align: center;
+        color: white;
+        margin-top: 20rem;
+        font-size: 5rem;
+        font-weight: bold;
+    }
+    .bg1 h3{
+        text-align: center;
+        color: white;
+        margin-top: 10px;
+        font-size: 5rem;
+    }
+    .bg1 button{
+        width: 33%;
+        height: 5.5vh;
+        margin-top: 60px;
+        margin-left: 310px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 24px;
+        color: white;
+        background-color: #ff0800;
+    }
+    .bg1 button:hover{
+        transform: scale(1.1);
+        transition: 1.5s ease-in-out;
+        background-color: white;
+        color: red;
+    }
+
+    .bg2 h2{
+        text-align: center;
+        color: white;
+        margin-top: 20rem;
+        font-size: 5rem;
+        font-weight: bold;
+    }
+    .bg2 h3{
+        text-align: center;
+        color: white;
+        margin-top: 10px;
+        font-size: 5rem;
+    }
+    .bg2 button{
+        width: 33%;
+        height: 5.5vh;
+        margin-top: 60px;
+        margin-left: 310px;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 24px;
+        color: white;
+        background-color: #ff0800;
+    }
+    .bg2 button:hover{
+        transform: scale(1.1);
+        transition: 1.5s ease-in-out;
+        background-color: white;
+        color: red;
+    }
+    .bg3 h2{
+        text-align: center;
+        color: white;
+        margin-top: 20rem;
+        font-size: 5rem;
+        font-weight: bold;
+    }
+    .bg3 h3{
+        text-align: center;
+        color: white;
+        margin-top: 10px;
+        font-size: 5rem;
+    }
+    .bg3 button{
+        width: 33%;
+        height: 5.5vh;
+        margin-top: 60px;
+        margin-left: 310px;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 24px;
+        color: white;
+        background-color: #ff0800;
+    }
+    .bg3 button:hover{
+        transform: scale(1.1);
+        transition: 1.5s ease-in-out;
+        background-color: white;
+        color: red;
+    }
+    .sect1-txt{
+        width: 100%;
+        color: #000000;
+        height: 10vh;
+        padding-top: 5vh;
+        padding-bottom: 10vh;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 28px;
+    }
+    .sect1-txt span{
+        color: #ff0800;
+    }
+   
+    
+    /* ///  SECTION2  /// */
+    .sect2-txt{
+        width: 100%;
+        color: #000000;
+        height: 10vh;
+        padding-top: 8vh;
+        padding-bottom: 5vh;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 28px;
+    }
+    .sect2-txt span{
+        color: #ff0800;
+    }
+    .sect2-txt h2{
+        font-weight: bold;
+    }
+
+    /* section 3 */
+
+    .meal-box{
+        width: 100%;
+        height: 70vh;
+        display: grid;
+        grid-template-columns: 1fr  1fr;
+        grid-gap: 20px;
+        
+    }
+    .meal-box1{
+        grid-column: 1;
+        grid-row: 1/3;
+        border-radius: 20px;
+        width: 100%;
+        position: relative; 
+        background-image: url(../images/Barbecued-Chicken.jpg);
+        background-size: cover;
+        
+        background-repeat: no-repeat;  
+    }
+    .meal-box1:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+        cursor: pointer;
+    }
+    .meal-box1 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 10px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    
+    .meal-box2{
+        border-radius: 20px;
+        width: 100%;
+        position: relative; 
+        background-image: url(../images/egusi\ soup.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;  
+      
+    }
+    .meal-box2:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+        cursor: pointer;
+    }
+    .meal-box2 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 5px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    
+    .meal-box3{
+        border-radius: 20px;
+        position: relative; 
+        background-image: url(../images/jollof\ rice.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .meal-box3:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+        cursor: pointer;
+    }
+    .meal-box3 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 5px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    .meal-box5{
+        border-radius: 20px;
+        position: relative; 
+        background-image: url(../images/Ogbono\ Soup.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .meal-box5:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+        cursor: pointer;
+    }
+    .meal-box5 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 5px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    .meal-box6{
+        border-radius: 20px;
+        position: relative; 
+        background-image: url(../images/spaghetti\ with\ meatballs.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .meal-box6:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+        cursor: pointer;
+    }
+    .meal-box6 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 5px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    .our-patners{
+        padding-bottom: 1rem;
+    }
+
+    /* footer */
+    .svg{
+        display: none;
+    }
+    .footer-menu{
+        position: unset;
+        font-size: 16px;
+        bottom: 0;
+        color: white;
+        padding: 0 !important;
+        
+    }
+    .footer{
+        background-color: #ff0800c9;
+        font-size: 0.5em;
+        position: unset;
+    }
+    .footer-menu1{
+        padding-top:  0 !important;
+    }
+    .footer-txt3{
+        padding-top: 20px !important;
+    }
+  
+
+
+
+
+     /* // CONTACT US PAGE // */
+     .contact-form{
+        height: auto;
+     }
+     .map{
+        margin-left: 0;
+     }
+
+      
+     .contact-icon{
+        width: 18%;
+        height: 3Vh;
+        padding: 10px;
+        border-radius: 100%;
+        background-color: rgb(245, 221, 217);
+        margin: 3px 19px 0px 10px;
+    }
+    .contact-icon1{
+        width: 18%;
+        height: 3Vh;
+        padding: 10px;
+        border-radius: 100%;
+        background: white;
+        box-shadow: 0px 0px 5px 0px rgba(32, 33, 36, 0.28);
+        margin: 3px 19px 0px 12px;
+    }
+    .contact-icon3{
+        width: 18%;
+        height: 3Vh;
+        padding: 10px;
+        border-radius: 100%;
+        background-color: rgb(245, 221, 217);
+        margin: 3px 19px 0px 10px;
+    }
+/*    
+    .contact-icon1{
+        width: 18%;
+        height: 5Vh;
+        padding: 12px;
+        border-radius: 100%;
+        background: white;
+        box-shadow: 0px 0px 5px 0px rgba(32, 33, 36, 0.28);
+        margin: 3px 19px 0px 12px;
+    } */
+  
+}
+
+
+
+
+@media screen and (max-width:768px){
+    .banner{
+        height: 78vh;
+    }
+    .bg1{
+        width: 100%;
+        height: 78vh;
+        background: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/burger2.jpeg);
+        background-position: center;
+        background-size: cover;
+    }
+    .bg2{
+        width: 100%;
+        height: 78vh;
+        background: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/egusi\ soup.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .bg3{
+        height: 78vh;
+        background: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/Peri\ Peri\ Style\ Chicken\ and\ Rice\ -\ Moribyan.jpeg);
+        background-position: center;
+        width: 100% !important;
+        background-size: cover;
+    }
+    .sect1-txt{
+        width: 100%;
+        color: #000000;
+        height: 10vh;
+        padding-top: 5vh;
+        padding-bottom: 18vh;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 28px;
+    }
+   
+    /* SECTION 3 */
+    .sect3-txt{
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+        
+    }
+    .meal-box{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        overflow: hidden;
+        
+    }
+    .meal-box1{
+        grid-column: 1;
+        grid-row: 1/3;
+        border-radius: 20px;
+        width: 100%;
+        position: relative; 
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: center; 
+    }
+    .meal-box1:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+    }
+    .meal-box1 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 8px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    
+    .meal-box2{
+        border-radius: 20px;
+        width: 100%;
+        height: 26vh;
+        position: relative; 
+        background-size: cover;
+        background-repeat: no-repeat;  
+      
+    }
+    .meal-box2:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+    }
+    .meal-box2 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 5px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    
+    .meal-box3{
+        border-radius: 20px;
+        width: 100%;
+        height: 26vh;
+        position: relative; 
+        background-image: url(../images/jollof\ rice.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .meal-box3:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+    }
+    .meal-box3 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 5px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    .meal-box5{
+        width: 100%;
+        height: 26vh;
+        border-radius: 20px;
+        position: relative; 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .meal-box5:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+    }
+    .meal-box5 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 5px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    .meal-box6{
+        width: 100%;
+        height: 26vh;
+        border-radius: 20px;
+        position: relative; 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .meal-box6:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+    }
+    .meal-box6 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 5px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    .sect3-btn button{
+        align-self: center;
+    }
+    .sect-btn{
+        color: white !important;
+        font-weight: bold !important;
+        background-color: #ff0800;
+        outline: none;
+        border: none;
+    }
+    .sect-btn:hover{
+        transition: 2s ease-in-out;
+        transform: scale(1.1);
+    }
+    .our-patners{
+        padding-bottom: 4rem !important;
+    }
+    .svg{
+        display: none;
+    }
+    .footer{
+        background-color:  #ff0800;
+        font-family: sans-serif;
+        color: black;
+        position: unset;
+        font-size: 1em;
+        padding: 2px !important;
+
+    }
+    .footer-txt span{
+        color: #ff0800;
+    
+    }
+    .footer-txt h3{
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+    .footer-txt p{
+        line-height: 25px;
+    }
+    .footer-txt button{
+        margin-left: 5em;
+        font-weight: 500;
+        background-color: yellow !important;
+        border: none;
+        height: 5vh !important;
+    }
+    .footer-list{
+        font-size: 1em;
+        padding-top: 10px;
+        border: none !important;
+        outline: none !important;
+        background-color: transparent !important;
+        text-align: center;
+    }
+    .footer-list li a{
+        text-decoration: none;
+        margin-bottom: 0px;
+        color: white;
+    }
+    .footer-list li{
+        list-style-type: none;
+        margin-bottom: 20px
+    }
+    .li-item a{
+        text-decoration: none;
+        color: #000000;
+        font-weight: 500;
+    }
+    .footer-list li a:hover{
+        color: yellow;
+    }
+    .footer-txt3{
+        padding-top: 0px !important;
+    }
+    .footer-img img{
+        display: none;
+    }
+    .footer-menu{
+        position:unset;
+        font-size: 16px;
+        bottom: 0;
+        color: white;
+        padding: 0px !important;
+        text-align: center;
+        
+    }
+    .icon{
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-right: 15px;
+        color: white;
+    }
+    .icon a{
+        color: white;
+        font-family: sans-serif;
+    }
+
+
+
+
+
+     /* // CONTACT US PAGE /// */
+     .contact-form{
+        height: auto;
+     }
+   
+     .contact-icon{
+        width: 18%;
+        height: 4Vh;
+        padding: 10px;
+        border-radius: 100%;
+        background-color: rgb(245, 221, 217);
+        margin: 3px 19px 0px 10px;
+    }
+    .contact-icon1{
+        width: 18%;
+        height: 4Vh;
+        padding: 10px;
+        border-radius: 100%;
+        background: white;
+        box-shadow: 0px 0px 5px 0px rgba(32, 33, 36, 0.28);
+        margin: 3px 19px 0px 12px;
+    }
+    .contact-icon3{
+        width: 18%;
+        height: 4Vh;
+        padding: 10px;
+        border-radius: 100%;
+        background-color: rgb(245, 221, 217);
+        margin: 3px 19px 0px 10px;
+    }
+    .map{
+        margin-left: 0;
+    }
+   
+  
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:480px){
+    .banner{
+        display: flex;
+        height: 60vh;
+        
+    }
+    .banner-a{
+      
+        display: none;
+    } 
+    .banner-b{
+        margin-top: 0px !important;
+        width: 100% !important;
+        height: 60vh !important;
+         position: relative;
+        z-index: -1 !important;
+        margin-left: 0px !important;
+    }
+    .bg1{
+        width: 100%;
+        height: 60vh;
+        background-size: contain;
+        
+    }
+    .bg1 h2{
+        text-align: center;
+        color: white;
+        margin-top: 120px;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    .bg1 h3{
+        text-align: center;
+        color: white;
+        margin-top: 10px;
+        font-size: 2.5em;
+    }
+    .bg1 button{
+        width: 34%;
+        height: 5.3vh;
+        margin-top: 50px;
+        margin-left: 120px;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+        background-color: #ff0800;
+    }
+    .bg1 button:hover{
+        transform: scale(1.1);
+        transition: 1.5s ease-in-out;
+        background-color: white;
+        color: red;
+    }
+    .bg2{
+        width: 100%;
+        height: 60vh;
+        background-size: cover;
+    }
+    .bg2 h2{
+        text-align: center;
+        color: white;
+        margin-top: 120px;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    .bg2 h3{
+        text-align: center;
+        color: white;
+        margin-top: 10px;
+        font-size: 2.5em;
+    }
+    .bg2 button{
+        width: 34%;
+        height: 5.3vh !important;
+        margin-top: 50px;
+        margin-left: 120px;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+        background-color: #ff0800;
+    }
+    .bg2 button:hover{
+        transform: scale(1.1);
+        transition: 1.5s ease-in-out;
+        background-color: white;
+        color: red;
+    }
+    
+    .bg3{
+        height: 60vh;
+        width: 100% !important;
+        background-size: cover;
+    }
+    .bg3 h2{
+        text-align: center;
+        color: white;
+        margin-top: 120px;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    .bg3 h3{
+        text-align: center;
+        color: white;
+        margin-top: 10px;
+        font-size: 2.5em;
+    }
+    .bg3 button{
+        width: 34%;
+        height: 5.3vh;
+        margin-top: 50px;
+        margin-left: 120px;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+        background-color: #ff0800;
+    }
+    .bg3 button:hover{
+        transform: scale(1.1);
+        transition: 1.5s ease-in-out;
+        background-color: white;
+        color: red;
+    }
+    .sect1-txt{
+        width: 100%;
+        color: #000000;
+        height: 10vh;
+        padding-top: 5vh;
+        padding-bottom: 18vh;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 28px;
+    }
+  
+ 
+
+    .sect2-txt{
+        width: 100%;
+        color: #000000;
+        height: 10vh;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 28px;
+    }
+   
+    .sect2-txt h2{
+        font-weight: bold;
+    }
+    .our-patners{
+        padding-bottom: 4rem !important;
+    }
+    
+   /* section 3 */
+    .sect3-txt{
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 20px;
+        
+    }
+    .meal-box{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        
+    }
+    .meal-box1{
+        grid-column: 1;
+        grid-row: 1/2;
+        border-radius: 20px;
+        width: 100%;
+        position: relative; 
+        background-image: url(../images/Barbecued-Chicken.jpg);
+        background-size: cover;
+        height: 40vh;
+        background-repeat: no-repeat;  
+    }
+    .meal-box1:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+        cursor: pointer;
+    }
+    .meal-box1 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 10px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    
+    .meal-box2{
+        border-radius: 20px;
+        width: 100%;
+        position: relative; 
+        background-image: url(../images/egusi\ soup.jpg);
+        background-size: cover;
+        height: 40vh;
+        background-repeat: no-repeat;  
+      
+    }
+    .meal-box2:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+        cursor: pointer;
+    }
+    .meal-box2 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 5px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    
+    .meal-box3{
+        border-radius: 20px;
+        position: relative; 
+        background-image: url(../images/jollof\ rice.jpg);
+        background-size: cover;
+        height: 40vh;
+        background-repeat: no-repeat;
+    }
+    .meal-box3:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+        cursor: pointer;
+    }
+    .meal-box3 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 5px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    .meal-box5{
+        border-radius: 20px;
+        position: relative; 
+        background-image: url(../images/Ogbono\ Soup.jpg);
+        background-size: cover;
+        height: 40vh;
+        background-repeat: no-repeat;
+    }
+    .meal-box5:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+        cursor: pointer;
+    }
+    .meal-box5 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 5px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    .meal-box6{
+        border-radius: 20px;
+        position: relative; 
+        background-image: url(../images/spaghetti\ with\ meatballs.png);
+        height: 40vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .meal-box6:hover{
+        transition: 2s ease-in-out;
+        transform: scale(0.9);
+        box-shadow: 0px 6px 10px 3px rgba(32, 33, 36, 0.28);
+        cursor: pointer;
+    }
+    .meal-box6 .txt-holder{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%; 
+        padding: 5px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+  
+
+
+    /* // CONTACT US PAGE // */
+
+    .icon-holder{
+        width: 100%;
+    }
+   
+    .contact-icon{
+        width: 12%;
+        height: 6Vh;
+        padding: 12px;
+        border-radius: 100%;
+        background-color: rgb(245, 221, 217);
+        margin: 3px 19px 0px 10px;
+    }
+    .contact-icon1{
+        width: 12%;
+        height: 6Vh;
+        padding: 12px;
+        border-radius: 100%;
+        background: white;
+        box-shadow: 0px 0px 5px 0px rgba(32, 33, 36, 0.28);
+        margin: 3px 19px 0px 12px;
+    }
+    .contact-icon3{
+        width: 12%;
+        height: 6Vh;
+        padding: 12px;
+        border-radius: 100%;
+        background-color: rgb(245, 221, 217);
+        margin: 3px 19px 0px 10px;
+    }
+    .map{
+        margin-left: 0em;
+        width:auto;
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+
+

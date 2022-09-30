@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.about-banner{
+    height: 50vh;
+    background: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,.7)) , url(../images/home\ delivery.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-position: center bottom;
+}
+.about-txt h1{
+    font-size: 4em;
+    opacity: 1;
+    color: white;
+    padding-top: 3em !important;
+
+}
+.about-us{
+    background-color: #eeeeee;
+}
+.about-us-head h3{
+    font-weight: bold;
+    color: #ff0800;
+    text-align: left !important;
+}
+.about-us-head p{
+    line-height: 1.5; 
+    font-size: 1em; 
+    text-align: left;
+    font-size: 1em;
+}
+.about-us-img{
+    width: auto;
+}
+.our-mission{
+   background-color: #eeeeee;
+}
+.our-team{
+   background-color: #eeeeee;
+}
+.our-team-head h3{
+    color: #ff0800;
+    font-weight: bold;
+}
+.t-1:hover{
+    transition: 1.5s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.t-2:hover{
+    transition: 1.5s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.t-3:hover{
+    transition: 1.5s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.t-4:hover{
+    transition: 1.5s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.t-5:hover{
+    transition: 1.5s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.t-6:hover{
+    transition: 1.5s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .loader-container img {
+    width: 18rem;
+  }
+
+  .loader-container.fade-out {
+    top: -110%;
+    opacity: 0;
+  }
+
+  
+
+
+@media screen and (max-width:480px){
+    .about-us-img{
+        width: auto;
+    }
+}

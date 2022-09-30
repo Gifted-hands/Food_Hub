@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+  <title>Sign Up</title>
+  <style>
+    body {
+      padding-top: 3.5em;
+      
+    }
+
+    .signup-parent {
+      width: 35vw;
+    }
+
+    .signup-icon i {
+      color:  #FA5E9D;
+    }
+
+    .signup-icon i:hover {
+      transition: 1.5s ease-in-out;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+
+    #errortxt {
+      color: red;
+      text-align: center;
+    }
+    .signup-form a{
+      text-decoration: none;
+    }
+    .signup-btn{
+      outline: none;
+      border: none;
+      background-color: #FA5E9D !important;
+      width: 35vw;
+
+    }
+    .signup-btn:hover{
+      background-color: #ff0800 !important;
+    }
+    .registertxt h3{
+      color: #FA5E9D;
+    }
+
+
+    @media screen and (max-width: 768px) {
+     
+     .signup-parent{
+       width: 80vw;
+     }
+     .signup-btn{
+       width: 45vw;
+     }
+     .signup-img img{
+       padding-top: 8em !important;
+     }
+   }
+
+
+    @media screen and (max-width: 480px) {
+      .signup-parent {
+        width: 100vw;
+      }
+      .signup-img{
+        display: none;
+      }
+      .signup-btn{
+        width: 100vw;
+      }
+
+    }
+
+
+    
+  </style>
+</head>
+
+<body>
+  <div class="parentelement mx-auto  bg-white container rounded shadow d-md-flex justify-content-between">
+    <div class="signup-img">
+      <img src="./images/signup.jpg" class="img-fluid pt-5">
+    </div>
+
+    <div class="signup-parent bg-white">
+      <div class="registertxt pt-5">
+        <h3 class="pb-2 text-center">Create an account</h3>
+      </div>
+      <div class="errorbox">
+        <h6 id="errortxt"></h6>
+      </div>
+      
+      <div class="pb-4 signup-form">
+        <form class="row g-3" method="post" action="menu.html" name="siginUp form" onsubmit="return verify()">
+          <div class="col-md-6 col-sm-12">
+            <label class="form-label ">Username</label>
+            <input type="text" class="form-control" id="username">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" id="mail">
+          </div>
+          <div class="col-12">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+          <div class="col-12">
+            <label class="form-label">Phone Number</label>
+            <div class="input-group">
+              <div class="input-group-text">+234</div>
+              <input type="text" class="form-control" id="number">
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="checkbox">
+              <label class="form-check-label">
+                I agree with the <a href="">Terms and Conditions</a>
+              </label>
+            </div>
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-primary  mb-3 signup-btn">Sign Up</button>
+          </div>
+        </form>
+
+        <div class="text-center login-options">
+          <div>
+            <p class="font-weight-bold">Or</p>
+          </div>
+          <div class="text-center signup-icon">
+
+            <i class="fa fa-twitter-square ic pe-2" style="font-size: 2em;"></i>
+            <i class="fa fa-facebook-square ic pe-2" style="font-size: 2em;"></i>
+            <i class="fa fa-instagram ic" style="font-size: 2em;"></i>
+          </div>
+          <div>
+            <P class="font-weight-bold">Already have an account? <a href="login.html">Login here</a></P>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script>
+
+    function verify() {
+
+      let username = document.getElementById('username').value;
+      let email = document.getElementById('mail').value;
+      let password = document.getElementById('password').value;
+      let phonenumber = document.getElementById('number').value;
+      let checkbox = document.getElementById('checkbox').checked;
+      let mailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      let number = /^[0-9]+$/;
+      let letters = /^[A-Za-z]+$/
+      let errors = ['Please fill in username', 'Username is too long', 'Please fill in email', 'Invalid email', 'please fill in password', 'Password should be 6+ characters', 'Please fill in your phone number', 'Incorrect format', 'Tick the terms & conditions']
+
+      if (username.trim() == "") {
+        document.getElementById('errortxt').innerHTML = errors[0];
+        return false;
+      } else if (username.length > 20) {
+        document.getElementById('errortxt').innerHTML = errors[1];
+        return false;
+      } else if (email.trim() == "") {
+        document.getElementById('errortxt').innerHTML = errors[2];
+        return false;
+      } else if (!mailPattern.test(email)) {
+        document.getElementById('errortxt').innerHTML = errors[3];
+        return false;
+      } else if (password.trim() == "") {
+        document.getElementById('errortxt').innerHTML = errors[4];
+        return false;
+      } else if (password.length < 6) {
+        document.getElementById('errortxt').innerHTML = errors[5];
+        return false;
+      } else if (phonenumber.trim() == "") {
+        document.getElementById('errortxt').innerHTML = errors[6];
+        return false;
+      } else if (!number.test(phonenumber)) {
+        document.getElementById('errortxt').innerHTML = errors[7];
+        return false;
+      } else if (phonenumber.length > 11 || phonenumber.length < 11) {
+        document.getElementById('errortxt').innerHTML = errors[7];
+        return false;
+      } else if (checkbox == "") {
+        document.getElementById('errortxt').innerHTML = errors[8];
+        return false;
+      } else {
+        localStorage.setItem('USERNAME', username);
+        return true;
+      }
+
+    }
+  </script>
+</body>
+
+</html>
